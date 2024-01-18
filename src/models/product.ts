@@ -1,10 +1,14 @@
 import { getModelForClass, prop } from "@typegoose/typegoose";
-import {Comment} from "./Comment";
+import { Comment } from "./Comment";
+//import {nanoid} from "nanoid";
 
 class Product {
    //Detalle de las propiedades que se guardaran del producto
    @prop({type:String, required:true, trim:true, uppercase:true})
    name: string;
+
+/*   @prop({required: true, default: () => nanoid() })
+   sku: string */
 
    @prop({type: Number, default: 0})
    precio: number;
