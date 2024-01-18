@@ -1,6 +1,7 @@
-import { getModelForClass, prop } from "@typegoose/typegoose";
+import { getModelForClass, prop, Ref } from "@typegoose/typegoose";
 import { Comment } from "./Comment";
 //import {nanoid} from "nanoid";
+import {User} from "./User";
 
 class Product {
    //Detalle de las propiedades que se guardaran del producto
@@ -22,6 +23,9 @@ class Product {
    @prop({type: ()=> [Comment]})
    comments: Comment[];
    
+   @prop({ref: () => User, required: true})
+   owner: Ref<User>;
+
 }
 
 

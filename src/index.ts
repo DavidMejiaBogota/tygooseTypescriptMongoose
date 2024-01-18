@@ -42,7 +42,7 @@ async function executeQueries() {
 /*    const users = await User.findOneAndDelete({email: "emilce.gomez@gmail.com"});
         console.log(users); */
 
-    const product = await Product.create({
+/*    const product = await Product.create({
         name: "latop",
         precio: 1000,
         url: "http://elproducto.co",
@@ -50,8 +50,12 @@ async function executeQueries() {
         comments: [
             { text: 'Awesome product'},
             { text: 'X Product'}
-        ]
+        ],
+        owner: "65a84ca6857e6b92af49c41f"
     });
+    console.log(product); */
+
+    const product = await Product.findById('65a99c568ab081a66b3e23e6').populate('owner');
     console.log(product);
 };
 

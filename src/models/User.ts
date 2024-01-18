@@ -1,7 +1,7 @@
 import {prop, getModelForClass} from '@typegoose/typegoose';
 
 //Esta clase user define los datos de usuario que yo quiero guardar en mi base de datos.
-class User{
+export class User{
 
     @prop({required:true,  uppercase:true}) //mongoose
     firstname:string; //typescript
