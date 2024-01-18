@@ -25,7 +25,7 @@ connectDB();
 function executeQueries() {
     return __awaiter(this, void 0, void 0, function* () {
         const product = yield product_1.default.create({
-            name: "latopo",
+            name: "latop",
             precio: 1000,
             url: "http://elproducto.co",
             tags: ['laptop', 'gaming', 'razer'],

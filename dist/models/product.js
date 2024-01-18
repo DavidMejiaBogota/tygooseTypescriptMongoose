@@ -11,17 +11,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const typegoose_1 = require("@typegoose/typegoose");
 const Comment_1 = require("./Comment");
-const nanoid_1 = require("nanoid");
 class Product {
 }
 __decorate([
     (0, typegoose_1.prop)({ type: String, required: true, trim: true, uppercase: true }),
     __metadata("design:type", String)
 ], Product.prototype, "name", void 0);
-__decorate([
-    (0, typegoose_1.prop)({ required: true, default: () => (0, nanoid_1.nanoid)() }),
-    __metadata("design:type", String)
-], Product.prototype, "sku", void 0);
 __decorate([
     (0, typegoose_1.prop)({ type: Number, default: 0 }),
     __metadata("design:type", Number)

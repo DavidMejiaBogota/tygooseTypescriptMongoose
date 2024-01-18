@@ -43,7 +43,7 @@ async function executeQueries() {
         console.log(users); */
 
     const product = await Product.create({
-        name: "latopo",
+        name: "latop",
         precio: 1000,
         url: "http://elproducto.co",
         tags: ['laptop', 'gaming', 'razer'],
