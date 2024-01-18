@@ -1,0 +1,1 @@
+Se realiza un CRUD en typeScript con mongoose, typegoose y mongodb
