@@ -1,6 +1,8 @@
 import {connect} from "mongoose";
 import User from "./models/User";
+import Product from "./models/product";
 
+//Configuración de conexión a la base d edatos
 async function connectDB() {
     const db = await connect('mongodb://localhost/typegoosedb');
     console.log('Dabase is connected to', db.connection.db.databaseName);
@@ -37,8 +39,8 @@ async function executeQueries() {
     console.log(users);*/
 
     //Método para elminiar por propieda email
-    const users = await User.findOneAndDelete({email: "emilce.gomez@gmail.com"});
-        console.log(users);
+/*    const users = await User.findOneAndDelete({email: "emilce.gomez@gmail.com"});
+        console.log(users); */
 };
 
 executeQueries();
