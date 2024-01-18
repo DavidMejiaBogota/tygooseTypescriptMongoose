@@ -41,6 +41,18 @@ async function executeQueries() {
     //Método para elminiar por propieda email
 /*    const users = await User.findOneAndDelete({email: "emilce.gomez@gmail.com"});
         console.log(users); */
+
+    const product = await Product.create({
+        name: "latopo",
+        precio: 1000,
+        url: "http://elproducto.co",
+        tags: ['laptop', 'gaming', 'razer'],
+        comments: [
+            { text: 'Awesome product'},
+            { text: 'X Product'}
+        ]
+    });
+    console.log(product);
 };
 
 executeQueries();
