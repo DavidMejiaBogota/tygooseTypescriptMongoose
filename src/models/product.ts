@@ -1,15 +1,6 @@
-import { getModelForClass, modelOptions, prop } from "@typegoose/typegoose";
+import { getModelForClass, prop } from "@typegoose/typegoose";
+import {Comment} from "./Comment";
 
-@modelOptions({
-    schemaOptions: {
-        timestamps: true,
-        _id: false
-    }
-})
-class Comment {
-    @prop()
-    text: string;
-};
 class Product {
    //Detalle de las propiedades que se guardaran del producto
    @prop({type:String, required:true, trim:true, uppercase:true})
