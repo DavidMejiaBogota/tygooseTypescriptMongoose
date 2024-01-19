@@ -88,14 +88,14 @@ async function executeQueries() {
 /*    const user = await User.find({firstname: 'LUIS'});
     console.log(user); */
 
-    const user = new User({
+/*    const user = new User({
         firstname: 'John',
         lastname: 'perez',
         email: 'john.perez@me.com',
     });
     user.password = user.encryptPassword("123456");
     await user.save();
-    console.log(user);
+    console.log(user); */
 };
 
 executeQueries();

@@ -1,7 +1,11 @@
-import {prop, getModelForClass, Ref, ReturnModelType} from '@typegoose/typegoose';
+import {prop, getModelForClass, Ref, ReturnModelType, pre} from '@typegoose/typegoose';
 import {Role} from './Role';
 
+
 //Esta clase user define los datos de usuario que yo quiero guardar en mi base de datos.
+@pre<User>('save', function (){
+    console.log(this.firstname)
+})
 export class User{
 
     @prop({required:true,  uppercase:true}) //mongoose
