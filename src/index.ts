@@ -81,6 +81,21 @@ async function executeQueries() {
     
 /*    const user = await User.findById('65aaa1f284fdd3b44b951275').populate('roles', 'name -_id');
     console.log(user); */
+
+/*    const result = await User.findByFirstName('julian');
+    console.log(result);*/
+
+/*    const user = await User.find({firstname: 'LUIS'});
+    console.log(user); */
+
+    const user = new User({
+        firstname: 'John',
+        lastname: 'perez',
+        email: 'john.perez@me.com',
+    });
+    user.password = user.encryptPassword("123456");
+    await user.save();
+    console.log(user);
 };
 
 executeQueries();
