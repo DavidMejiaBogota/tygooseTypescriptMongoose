@@ -1,6 +1,6 @@
 import { prop, getModelForClass } from "@typegoose/typegoose";
 
-class Role {
+export class Role {
     @prop()
     name: string
 }

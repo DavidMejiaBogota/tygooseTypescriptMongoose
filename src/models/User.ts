@@ -1,4 +1,5 @@
-import {prop, getModelForClass} from '@typegoose/typegoose';
+import {prop, getModelForClass, Ref} from '@typegoose/typegoose';
+import {Role} from './Role';
 
 //Esta clase user define los datos de usuario que yo quiero guardar en mi base de datos.
 export class User{
@@ -14,7 +15,10 @@ export class User{
     
     @prop({required:true, minlength: 8, maxlength:20})
     password:string;
-    
+
+    @prop({ref: ()=> Role})
+    roles: Ref<Role>[]
+
 }
 
 const UserModel = getModelForClass(User);

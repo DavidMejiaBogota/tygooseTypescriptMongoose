@@ -17,6 +17,7 @@ async function executeQueries() {
         lastname: "perez",
         email: "  LUIS.PEREZ@gmail.com  ",
         password: "password7"
+        roles:['65aa96727dc85da0ea3cd09f', '65aa96727dc85da0ea3cd0a1']
     });
     
     await user.save();
@@ -59,13 +60,27 @@ async function executeQueries() {
 /*    const product = await Product.findById('65a99c568ab081a66b3e23e6').populate('owner');
     console.log(product); */
 
-    const results = await Role.insertMany([
+/*    const results = await Role.insertMany([
         {name: 'admin'},
         {name: 'guest'},
         {name: 'user'},
     ])
 
-    console.log(results);
+    console.log(results);*/
+
+/*   const user = new User({
+        firstname: 'ryan',
+        lastname: 'Ray',
+        email: 'ryanray@me.com',
+        password: 'yupitiiiiiii',
+        roles: ["65aa96727dc85da0ea3cd09f", "65aa96727dc85da0ea3cd0a1"],
+    });
+
+    await user.save();
+    console.log(user); */
+    
+/*    const user = await User.findById('65aaa1f284fdd3b44b951275').populate('roles', 'name -_id');
+    console.log(user); */
 };
 
 executeQueries();
