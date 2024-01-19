@@ -23,7 +23,7 @@ class Product {
    @prop({type: ()=> [Comment]})
    comments: Comment[];
    
-   @prop({ref: () => User, required: true})
+   @prop({ref: () => User})
    owner: Ref<User>;
 
 }
