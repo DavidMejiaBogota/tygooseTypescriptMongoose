@@ -3,5 +3,5 @@
 *js.map
 *.d.ts
 *.log
-dist
+./dist
 
