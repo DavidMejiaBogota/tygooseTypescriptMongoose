@@ -1,6 +1,7 @@
 import {connect} from "mongoose";
 import User from "./models/User";
 import Product from "./models/product";
+import Role from "./models/Role";
 
 //Configuración de conexión a la base d edatos
 async function connectDB() {
@@ -55,8 +56,16 @@ async function executeQueries() {
     });
     console.log(product); */
 
-    const product = await Product.findById('65a99c568ab081a66b3e23e6').populate('owner');
-    console.log(product);
+/*    const product = await Product.findById('65a99c568ab081a66b3e23e6').populate('owner');
+    console.log(product); */
+
+    const results = await Role.insertMany([
+        {name: 'admin'},
+        {name: 'guest'},
+        {name: 'user'},
+    ])
+
+    console.log(results);
 };
 
 executeQueries();
